@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raijingusan Key System</title>
+    <link rel="stylesheet" href="Raijingusan.css">
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LedxmoqAAAAAOH68qi1UtabQc2PwdAIIZb-Osjr"></script>
+</head>
+<body>
+  <script>
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LedxmoqAAAAAOH68qi1UtabQc2PwdAIIZb-Osjr', {action: 'LOGIN'});
+    });
+  }
+</script>
+    <div id="app">
+        <div id="about">
+            <h1 class="title">Welcome to the Raijingusan Key System!</h1>
+            <h2 class="description">The author tried very hard, so he asks you to go through the key system</h2>
+        </div>
+    </div>
+</body>
+</html>

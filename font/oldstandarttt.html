@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <title>Fontize CSS</title>
-<body>
-
-<script>
-  navigator.clipboard.writeText("/* cyrillic-ext */
+  <title>Fontize Css</title>
+  <body>
+    <input type="text" value="/* cyrillic-ext */
 @font-face {
   font-family: 'Old Standard TT';
   font-style: italic;
@@ -138,8 +136,21 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/oldstandardtt/v20/MwQrbh3o1vLImiwAVvYawgcf2eVWEX-tS1ZfTc4PlA.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }")
+}" id="myInput">
+    <button onclick="myFunction()">Copy Css</button>
+    <script>
+      function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+      }
 </script>
-<p>Copied</p>
-</body>
-</html>
